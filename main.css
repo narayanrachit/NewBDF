@@ -1,0 +1,164 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	
+}
+.animation{
+	height: auto;
+	width: 100%;
+	overflow: hidden;
+	
+}
+.train{
+	height: auto;
+	width: 100%;
+	overflow: hidden;
+	
+}
+* {
+    padding:0;
+    margin:0
+}
+.social-icons {
+	list-style: none;
+	width: 50px;
+  position: fixed;
+  top:40%;
+    font-size: 30px;
+}
+.social-icons li {
+	float:none;
+  display: block
+}
+.social-icons li a {
+    display:inline-block;
+    width:50px;
+    height:50px;
+    float: right;
+    overflow:hidden
+}
+.social-icons li a i {
+    padding:13px
+}
+.facebook {
+    color:#3d5b99
+}
+.facebook:hover {
+    color:#fff;
+  	background-color: #3d5b99
+}
+.twitter {
+    color:#00aced
+}
+.twitter:hover {
+    color:#fff;
+  	background-color: #00aced
+}
+.youtube {
+    color:#e64a41
+}
+.youtube:hover {
+    color:#fff;
+	  background-color: #e64a41
+}
+.linkedin {
+    color:#0073a4
+}
+.linkedin:hover {
+    color:#fff;
+  	background-color: #0073a4
+}
+.instagram {
+    color:#e25714
+}
+.instagram:hover {
+    color:#fff;
+  	background-color: #e25714
+}
+.facebook,
+.twitter,
+.youtube,
+.linkedin,
+.instagram {
+    -o-transition:.5s ease;
+  	-ms-transition:.5s ease;
+  	-moz-transition:.5s ease;
+  	-webkit-transition:.5s ease;
+  	transition: .5s ease
+}
+.facebook:hover,
+.twitter:hover,
+.youtube:hover,
+.linkedin:hover,
+.instagram:hover {
+    width:50px
+}
+
+
+marquee{
+	font-size: 40px;
+	font-family: cursive;
+	font-weight: bold;
+	font-style: italic;
+}
+
+#cloud1{
+	animation: cloud1 7s linear infinite;
+	transform-origin: bottom;
+}
+#cloud2{
+	animation: cloud2 6s linear infinite;
+	transform-origin: bottom;
+}
+#cloud3{
+	animation: cloud3 5s linear infinite;
+	transform-origin: bottom;
+}
+#cloud4{
+	animation: cloud4 8s linear infinite;
+	transform-origin: bottom;
+}
+
+
+@keyframes cloud1{
+	from{
+		transform: translateX(-200px);
+	}
+	to{
+		transform: translateX(1200px);
+	}
+}
+@keyframes cloud2{
+	from{
+		transform: translateX(-800px);
+	}
+	to{
+		transform: translateX(1200px);
+	}
+}
+@keyframes cloud3{
+	from{
+		transform: translateX(-500px);
+	}
+	to{
+		transform: translateX(1200px);
+	}
+}
+@keyframes cloud4{
+	from{
+		transform: translateX(-700px);
+	}
+	to{
+		transform: translateX(1200px);
+	}
+}
+
+
+.footer
+{
+  background:#c70039;
+height: 50px;
+margin-top: 50px;
+color: #fff;
+padding-top: 10px;
+}
