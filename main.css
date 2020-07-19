@@ -152,6 +152,12 @@ nav {
 	height: 5rem;
 	background-size: contain;
 }
+
+@media (max-width: 650px) {
+  #donate, #treehouse {
+    display: none;
+	}
+  }
 /*donate End*/
 
 /*Progess-o-meter*/
