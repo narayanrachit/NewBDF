@@ -1,17 +1,10 @@
-/*Navbar CSS*/
-
-$size : 50px;
-$items : 5;
-$transition : .5s;
-$bounce : cubic-bezier(.3,1.4,.5,.9);
-$color-inner : gold;
-$color-outer : tomato;
-$background: mix($color-inner, $color-outer);
-$black : shade($color-outer, 80%);
-$start-scale : .5;
-$start-rot : 190deg;
-
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:800,900');
+
+@font-face {
+  font-family: "Chalk";
+  src: url("fonts/Chalkabout.otf");
+}
+
 
 html, body { height: 100%; }
 body {
@@ -19,115 +12,85 @@ body {
 	font-family: Alegreya Sans, sans-serif;
 }
 
-nav {
-	display: block;
-	position: fixed;
-	width: 50px * 5 * 2;
-	height: 50px * 5 * 2;
-	user-select: none;
-	transform: translate3d(50px*.5,-50px*.5,0);
-	transition: transform .5s cubic-bezier(.3,1.4,.5,.9);
+body{
+	margin: 0px;
+	padding: 0px;
 	
-	&.open {
-		transform: translate3d(0,0,0);
-	}
+}
+.animation{
+	height: auto;
+	width: 100%;
+	overflow: hidden;
 	
-	&.top-right {
-		top: -50px * (5 - 2.2);
-		right: -50px * (5 - 2.2);
-	}
 }
 
-.disc {	
-	position: absolute;
-	display: inline-block;
-	text-align: center;
-	cursor: pointer;
-	font: $size*.5 Alegreya Sans, sans-serif;
-	line-height: $size * .8;
-	padding-top: $size * .2;
-	border-radius: $size * $items;
-	transform: scale3d($start-scale, $start-scale, $start-scale) rotate3d(0,0,1,$start-rot);
-	pointer-events: none;
-	opacity: 0;
-	cursor: pointer;
-	transition: transform $transition $bounce, opacity $transition;
-	
-	div {
-		transform: rotate(180deg);
-	}
-	
-	.open & {
-		pointer-events: auto;
-		opacity: 1;	
-	}
+/*Footer*/
+
+footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
 }
 
-@for $i from 1 through $items {
-	.l#{$i} {
-		$i : $i - 1;
-		$-i : $items - $i;
-		$pct : $i/$items * 100%;
-		$color :  mix($color-inner, $color-outer, $pct);
-		
-		top: $i * $size;
-		left: $i * $size;
-		right: $i * $size;
-		bottom: $i * $size;
-		background: $color;
-		transition-delay: $i * $transition/$items;
-	
-		.open & {
-			transition-delay: $i * $transition/$items;
-			transform: scale3d(1,1,1) rotate3d(0,0,1,$start-rot);
-			opacity: 1;
-			
-			&:hover {
-				background: shade($color, 90%);
-				color: $color;
-				transition-delay: 0s;
-
-			}
-	
-			&:active {
-				background: shade($color, 50%);
-				color: $color;
-			}
-			
-			&.toggle {
-				transform: scale3d(.9,.9,.9) rotate3d(0,0,1,$start-rot - 180deg);
-			}
-		}
-	}
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
 }
 
-.toggle {
-	line-height: $size*2;
-	padding: 0;
-	width: $size*2;
-	background: $color-inner;
-	opacity: 1;
-	transform: none;
-	pointer-events: auto;
-	transition-delay: 0s;
-	
-	.open & {
-		transform: rotate3d(0,0,1,0deg);
-	}
-
-	&:hover {
-		background: shade($color-inner, 90%);
-		text-decoration: underline;
-	}
-	&:active {
-		background: shade($color-inner, 50%);
-		color: rgba($color-inner, .5);
-		transform: scale(.9);
-		transition-duration: 0s;
-	}
+footer a {
+  color: #d5d5d5;
 }
-/*Navbar CSS End*/
 
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+/*Footer End*/
+
+
+/*Navbar*/
+.navbar {
+  padding: .8rem;
+}
+
+/*#menu {
+  background-color: transparent!important;
+}*/
+
+@media only screen and (max-width: 767px){
+  #menu {
+    background-color: #343a40!important;
+  }
+}
+
+.navbar-nav a {
+  font-family: Chalk, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar-dark .navbar-brand {
+  font-family: Chalk, sans-serif;
+  font-size: 1.3em !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.nav-link {
+  font-size: 1.1em !important;
+}
+
+/*Navbar End*/
 
 /*Treehouse*/
 #treehouse {
@@ -160,79 +123,61 @@ nav {
   }
 /*donate End*/
 
+
 /*Progess-o-meter*/
+#progress {
+	font-family: Chalk;
+}
+
 .fa-street-view {
-  color: #e54d26;
-}
-
-.fa-globe {
-  color: #2163af;
-}
-
-.fa-users {
-  color: #563d7c;
-}
-
-.fa-cutlery {
-  color: #41473b;
-}
-
-.fa-street-view, .fa-globe, .fa-users, .fa-cutlery {
-  font-size: 4rem!important;
-  margin: 1rem;
-}
-
-/*Progess-o-meter End*/
-
-
-
-/*Rainbow-BG*/
-#rainbow-bg {
-	background: linear-gradient(116deg,#598ae4,#4200f9,#00f9cf,#0ad9f0);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	color: white;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-/*Rainbow-BG End*/
-
-
+	color: #e54d26;
+  }
+  
+  .fa-globe {
+	color: #2163af;
+  }
+  
+  .fa-users {
+	color: #563d7c;
+  }
+  
+  .fa-cutlery {
+	color: #41473b;
+  }
+  
+  .fa-street-view, .fa-globe, .fa-users, .fa-cutlery {
+	font-size: 4rem!important;
+	margin: 1rem;
+  }
+  
+  /*Progess-o-meter End*/
+  
+  
+  
+  /*Rainbow-BG*/
+  #rainbow-bg {
+	  background: linear-gradient(116deg,#598ae4,#4200f9,#00f9cf,#0ad9f0);
+	  background-size: 400% 400%;
+	  animation: gradient 15s ease infinite;
+	  color: white;
+  }
+  
+  @keyframes gradient {
+	  0% {
+		  background-position: 0% 50%;
+	  }
+	  50% {
+		  background-position: 100% 50%;
+	  }
+	  100% {
+		  background-position: 0% 50%;
+	  }
+  }
+  /*Rainbow-BG End*/
 
 
 
 
-
-
-
-
-
-
-
-
-body{
-	margin: 0px;
-	padding: 0px;
-	font-family: Alegreya Sans, sans-serif;
-	overflow-x: hidden;
-	
-}
-.animation{
-	height: auto;
-	width: 100%;
-	overflow: hidden;
-	
-}
 .train{
 	height: auto;
 	width: 100%;
@@ -248,6 +193,7 @@ body{
 	width: 50px;
   position: fixed;
   top:40%;
+  right:0%;
     font-size: 30px;
 }
 .social-icons li {
@@ -258,7 +204,6 @@ body{
     display:inline-block;
     width:50px;
     height:50px;
-    float: right;
     overflow:hidden
 }
 .social-icons li a i {
@@ -342,6 +287,22 @@ marquee{
 	animation: cloud4 8s linear infinite;
 	transform-origin: bottom;
 }
+#cloud5{
+	animation: cloud5 10s linear infinite;
+	transform-origin: bottom;
+}
+#cloud6{
+	animation: cloud6 15s linear infinite;
+	transform-origin: bottom;
+}
+#cloud7{
+	animation: cloud7 18s linear infinite;
+	transform-origin: bottom;
+}
+#pencil-fly{
+	animation: pencil 1s ease-in-out infinite alternate;
+	transform-origin: bottom;
+}
 
 
 @keyframes cloud1{
@@ -376,13 +337,37 @@ marquee{
 		transform: translateX(1200px);
 	}
 }
-
-
-.footer
-{
-  background:#c70039;
-height: 50px;
-margin-top: 50px;
-color: #fff;
-padding-top: 10px;
+@keyframes cloud5{
+	from{
+		transform: translateX(-700px);
+	}
+	to{
+		transform: translateX(1200px);
+	}
 }
+@keyframes cloud6{
+	from{
+		transform: translateX(-700px);
+	}
+	to{
+		transform: translateX(1200px);
+	}
+}
+@keyframes cloud7{
+	from{
+		transform: translateX(-700px);
+	}
+	to{
+		transform: translateX(1200px);
+	}
+}
+@keyframes pencil{
+	from{
+		transform: rotateX(15deg);
+	}
+	to{
+		transform: rotateX(20deg);
+	}
+}
+
+
