@@ -129,8 +129,30 @@ nav {
 /*Navbar CSS End*/
 
 
+/*Treehouse*/
+#treehouse {
+	position: absolute;
+	display: block;
+	right: 0;
+	left: auto;
+	width: 17rem;
+	height: 17rem;
+	background-size: contain;
+}
+/*Treehouse End*/
 
-
+/*donate*/
+#donate {
+	position: absolute;
+	display: inline-block;
+	right: 15rem;
+	margin-top: 5rem;
+	left: auto;
+	width: 5rem;
+	height: 5rem;
+	background-size: contain;
+}
+/*donate End*/
 
 /*Progess-o-meter*/
 .fa-street-view {
@@ -196,6 +218,7 @@ body{
 	margin: 0px;
 	padding: 0px;
 	font-family: Alegreya Sans, sans-serif;
+	overflow-x: hidden;
 	
 }
 .animation{
