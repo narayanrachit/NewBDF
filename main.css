@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:800,900');
 
+@font-face {
+	font-family: "Chalk";
+	src: url("fonts/Chalkabout.otf");
+  }
+  
+
 html, body { height: 100%; }
 body {
 	background: beige;
@@ -11,11 +17,85 @@ body{
 	padding: 0px;
 	
 }
+
+
+
+footer {
+	background-color: #3f3f3f;
+	color: #d5d5d5;
+	padding-top: 2rem;
+  }
+  
+  hr.light {
+	border-top: 1px solid #d5d5d5;
+	width: 75%;
+	margin-top: .8rem;
+	margin-bottom: 1rem;
+  }
+  
+  footer a {
+	color: #d5d5d5;
+  }
+  
+  hr.light-100 {
+	border-top: 1px solid #d5d5d5;
+	width: 100%;
+	margin-top: .8rem;
+	margin-bottom: 1rem;
+  }
+  
+  /*Footer End*/
+  
+  
+  /*Navbar*/
+  .navbar {
+	padding: .8rem;
+  }
+ 
+  /*#menu {
+	background-color: transparent!important;
+  }
+  
+  @media only screen and (max-width: 767px){
+	#menu {
+	  background-color: #343a40!important;
+	}
+  }
+  */
+  .nav-link{
+	  color: black;
+  }
+  .navbar-nav a {
+	font-family: Chalk, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+  }
+  
+  .navbar-light .navbar-brand {
+	font-family: Chalk, sans-serif;
+	font-size: 1.3em !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+  }
+  
+  .navbar-nav li {
+	padding-right: 20px;
+  }
+  
+  .nav-link {
+	font-size: 1.1em !important;
+  }
+  
+  /*Navbar End*/
+
+
+
 .animation{
 	height: auto;
 	width: 100%;
 	overflow: hidden;
-	
+	padding-top: 57px;
 }
 
 
@@ -23,11 +103,16 @@ body{
 #treehouse {
 	position: absolute;
 	display: block;
-	right: 0;
+	right: 52px;
 	left: auto;
 	width: 17rem;
 	height: 17rem;
 	background-size: contain;
+	margin-top: 53px;
+}
+
+#donate:hover{
+	transform: scale(1.2);
 }
 /*Treehouse End*/
 
@@ -41,17 +126,47 @@ body{
 	width: 5rem;
 	height: 5rem;
 	background-size: contain;
+	margin-top: 129px;
 }
 
+#Dbut{
+	display: none;
+	margin-left: 35%;
+}
+@media(max-width: 1024px){
+	#treehouse{
+		margin-top: 64px;
+	}
+	#donate{
+		margin-top: 150px;
+	}
+}
+@media(max-width: 768px){
+	#donate{
+		margin-right: -56px;
+		margin-top: 149px;
+	}
+	#treehouse{
+		margin-top: 65px;
+		margin-right: -50px;
+	}
+}
 @media (max-width: 650px) {
   #donate, #treehouse {
     display: none;
+	}
+	#Dbut{
+		display: inline-block;
 	}
   }
 /*donate End*/
 
 
 /*Progess-o-meter*/
+#progress {
+	font-family: Chalk;
+}
+
 .fa-street-view {
 	color: #e54d26;
   }
@@ -189,7 +304,7 @@ body{
 
 marquee{
 	font-size: 40px;
-	font-family: cursive;
+	font-family: "Chalk";;
 	font-weight: bold;
 	font-style: italic;
 }
