@@ -12,28 +12,58 @@
 
 <body style="background-image: linear-gradient(to right, #cc9966 , white);">
 
-     <!-- Navbar -->
-     <header >
-        <nav class="navbar smart-scroll navbar-expand-md navbar-light fixed-top" id="menu" >
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Dauntless</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarmenu">
-                    <ul class="navbar-nav  ml-auto" >
-                        <li class="nav-item" style="color: black;"><a href="" class="nav-link active">Home</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Campaigns</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Impact</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
-                       <!-- <li class="nav-item"><button type="button" class="btn btn-outline-secondary">Donate</button></li>-->
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Navbar End-->
+
+    <div class="header">
+        <input type="checkbox" class="nav-box" id="nav-box">
+        <label for="nav-box" class="nav-label"><span class="nav-span"><img src="logox.png" id="logo" style="height: 75px; margin-top: -34px;"></span></label>
+        <div class="nav-back"></div>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Comunity</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+        </div>
+        
+        <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+
+
 <div class="animation">
     <!--Animation-->
     <svg width="100%"  viewBox="0 0 1097 500" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -126,8 +156,8 @@
     <section id="rainbow-bg"  >
         <div class="container-fluid padding">
             <div class="row padding text-center">
-                <div class="col-lg">
-                    <h2>About Us</h2>
+                <div class="col-lg" style="font-size: 22px;">
+                    <h2 style="font-size: 32px;">About Us</h2>
                     <p>We are India's Proactive Youth-Led Organistation with a vision to empower children through quality education and by accomplishing the UN SDGs</p>
                     <!-- <br> -->
                     <!-- <a href="" class="btn btn-primary">Learn More</a> -->
@@ -158,10 +188,10 @@
         <div class="container-fluid padding">
             <div class="row welcome text-center">
                 <div class="col-12">
-                    <h1 class="dispaly-4">Progress</h1>
+                    <h1 class="dispaly-4" style="font-size: 50px;">Progress</h1>
                 </div>
                 <hr>
-                <div class="col-12">
+                <div class="col-12" style="font-size: 40px;">
                     <p class="lead">Some text on progress here</p>
                 </div>
             </div>
@@ -173,23 +203,23 @@
             <div class="row text-center padding" id="inprog" >
                 <div class="col-xs-12 col-sm-6 col-md-2">
                     <i class="fa fa-street-view"></i>
-                    <h3>5000+</h3>
-                    <p>Lives Empowered</p>        
+                    <h3 style="font-size: 30px;">5000+</h3>
+                    <p style="font-size: 20px;">Lives Empowered</p>        
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-2">
                     <i class="fa fa-globe"></i>
-                    <h3>44+</h3>
-                    <p>Presence</p>        
+                    <h3 style="font-size: 30px;">44+</h3>
+                    <p style="font-size: 20px;">Presence</p>        
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-2">
                     <i class="fa fa-users"></i>
-                    <h3>64+</h3>
-                    <p>Team Members</p>        
+                    <h3 style="font-size: 30px;">64+</h3>
+                    <p style="font-size: 20px;">Team Members</p>        
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-2">
                     <i class="fa fa-cutlery"></i>
-                    <h3>15000+</h3>
-                    <p>Meals Served</p>        
+                    <h3 style="font-size: 30px;">15000+</h3>
+                    <p style="font-size: 20px;">Meals Served</p>        
                 </div>
                 <button onclick="myFunction()" type="button" class="btn btn-outline-warning Download-button" id="Dbut" style="color: black; border-color: black;">Donate</button>
                 <!-- <div class="col-xs-12 col-sm-6 col-md-2">
@@ -229,7 +259,7 @@
         </div>
     </footer>-->
 <br>
-    <div class="footer" style="text-align: center; background-color: #cc9966; font-weight: bold;">
+    <div class="footer" style="text-align: center; background-color: #cc9966; font-weight: bold; font-size: 20px;">
         Made with ♥️ for BDF
     </div>
 
