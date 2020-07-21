@@ -4,6 +4,11 @@
 	font-family: "Chalk";
 	src: url("fonts/Chalkabout.otf");
   }
+
+@font-face{
+	font-family: "Calculator";
+	src: url("fonts/Calculator.ttf")
+}
   
   *,
 *::before,
@@ -269,7 +274,7 @@ footer {
   }
 
   #logo:hover{
-	  transform: scale(1.2);
+	  transform: scale(.8);
   }
   /*# sourceMappingURL=main.css.map */
 
@@ -296,10 +301,10 @@ footer {
 	display: block;
 	right: 52px;
 	left: auto;
-	width: 21rem;
-	height: 21rem;
+	width: 35rem;
+	height: 30rem;
 	background-size: contain;
-	margin-top: 79px;
+	margin-top: 0px;
 }
 
 #donate:hover{
@@ -311,34 +316,41 @@ footer {
 #donate {
 	position: absolute;
 	display: inline-block;
-	right: 21rem;
-	margin-top: 5rem;
+	right: 30rem;
+	margin-top: 4rem;
 	left: auto;
-	width: 8rem;
-	height: 8rem;
+	width: 12rem;
+	height: 12rem;
 	background-size: contain;
-	margin-top: 111px;
-	margin-left: 37px;
+	margin-top: 75px;
+	margin-left: 20px;
 }
 
 #Dbut{
 	display: none;
-	margin-left: 35%;
+	margin-left: 41%;
 }
 @media(max-width: 1024px){
 	#treehouse{
-		margin-top: 77px;
+		margin-top: 0px;
+    	right: 1rem;
+	}
+	#donate{
+		right: 24rem;
 	}
 	
 }
 @media(max-width: 768px){
 	#donate{
-		margin-right: -56px;
+		margin-right: -90px;
 		margin-top: 108px;
+		width: 9rem;
+    	height: 9rem;
 	}
 	#treehouse{
 		margin-top: 77px;
-		margin-right: -50px;
+		width: 22rem;
+		height: 22rem;
 	}
 }
 @media (max-width: 650px) {
@@ -493,10 +505,10 @@ footer {
 
 
 marquee{
-	font-size: 40px;
-	font-family: "Chalk";;
+	font-size: 30px;
+	font-family: "Calculator";;
 	font-weight: bold;
-	font-style: italic;
+	/*font-style: italic;*/
 }
 
 #cloud1{
